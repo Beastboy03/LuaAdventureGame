@@ -1,7 +1,8 @@
 
--- innitialising a table called rooms with details about each room
--- each room is represented by a key which has its own table with..
--- attributes specific to that room.
+--[[ innitialising a table called rooms with details about each room.
+each room is represented by a key which has its own table with
+attributes specific to that room.
+--]]
 
 local rooms = {
     forest = {
@@ -70,4 +71,33 @@ local rooms = {
         npcs = {},
         isLocked = true
     }
+}
+
+
+--[[
+Setting up initial game state
+--]]
+
+local player = {
+    location = "forest", --where the player is currently at
+    inventory = {}, --items the player finds
+    health = 100,   -- player's health points
+    maxHealth = 100, -- Maximum health points
+    level = 1, -- player's current health
+    ability = {
+        strength = 10,
+        agility = 8,
+        intelligence = 12
+    },
+    equipment = {   --Equipped items
+        weapon = "wooden stick",
+        armor = "cloth tunic"
+    },
+    gold = 0,
+    statusEffects = {}, --effects like "poisoned", "Boosted", --effects
+    quests = {          -- active and completed quests
+        active = {},
+        completed = {}
+    }
+
 }
