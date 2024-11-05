@@ -1,0 +1,9 @@
+# Ignore system and temporary files
+.DS_Store     # macOS system files
+*.log         # Log files
+*.tmp         # Temporary files
+
+# Ignore Lua project-specific folders or files
+build/        # Ignore build folder
+tmp/          # Ignore temp folder
+
